@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var validator = require('express-validator');
+var logger = require("morgan");
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -34,9 +35,9 @@ app.use('/', index)
 app.use('/home', home);
 
 // catch 404 and forward to error handler
-app.use((req, res, next) => {略});
+app.use((req, res, next) => {});
 
 // error handler
-app.use((err, req, res, next) => {略});
+app.use((err, req, res, next) => {});
  
 module.exports = app;
